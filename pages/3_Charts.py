@@ -9,7 +9,7 @@ st.set_page_config(page_title="Scrum Indicators", layout="wide")
 # --- DATABASE CONNECTION ---
 @st.cache_data # Cache data to improve performance
 def get_data():
-    conn = sqlite3.connect(r'C:\SampleProjects\Metrics\Metrics.db') 
+    conn = sqlite3.connect('Metrics.db') 
     # Pulling all relevant columns for both charts
     query = """
     SELECT initiative, squad, sprint, 
